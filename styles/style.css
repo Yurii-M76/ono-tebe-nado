@@ -1,1 +1,53 @@
 /* место для вашего кода */
+
+.header {
+  display: flex;
+  box-sizing: border-box;
+  background-color: #fff;
+  margin: 0 auto;
+  width: 1440px;
+}
+
+.header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 92px 49px 92px 51px;
+  width: 100%;
+}
+
+.header__nav-list {
+  display: flex;
+  gap: 13px;
+  list-style: none;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.header__nav-list__link {
+  text-decoration: none;
+  border-bottom: 1px solid #000
+}
+
+.header__nav-list__link-active {
+  text-decoration: none;
+}
+
+.header__container__contacts {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.35;
+}
+
+.header__container__contacts-phone,
+.header__container__contacts-mail,
+.header__container__contacts-address {
+  width: 240px;
+}
+
+.accent-span {
+  border-bottom: 1px solid #000
+}
