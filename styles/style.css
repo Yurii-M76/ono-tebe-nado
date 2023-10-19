@@ -85,7 +85,10 @@ body {
 .cover {
   position: relative;
   display: flex;
+  flex-direction: column;
   flex-basis: 757px;
+  justify-content: space-between;
+  padding: 165px 50px 50px;
   color: #fff;
   background-image: url("../images/cover.jpg");
   background-repeat: no-repeat;
@@ -95,42 +98,47 @@ body {
 
 .overlay {
   position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
 .cover__title {
-  position: absolute;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 24px;
+  gap: 20px;
   width: 100%;
-  padding: 175px 50px 0px;
   font-weight: 700;
   font-size: 100px;
   line-height: 1;
-  letter-spacing: 30px;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
 }
 
 .aligned-text {
+  line-height: 1.15;
   text-align: left;
 }
 
 .aligned-text_center {
-  padding: 3px 60px 0 0;
   text-align: center;
 }
 
 .aligned-text_right {
-  line-height: 0.9;
   text-align: right;
 }
 
+.letter-spacing-normal {
+  letter-spacing: 0.3em;
+}
+
 .letter-spacing-extended {
-  letter-spacing: 60px;
+  letter-spacing: 0.6em;
 }
 
 .no-letter-spacing {
@@ -138,11 +146,9 @@ body {
 }
 
 .cover__description {
-  position: absolute;
-  right: 50px;
-  bottom: 50px;
+  z-index: 1;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   gap: 80px;
 }
@@ -160,7 +166,7 @@ body {
   border: 1px solid currentColor;
   padding: 12px 32px;
   color: #fff;
-  font-family: Raleway;
+  font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-size: 22px;
   line-height: normal;
@@ -204,20 +210,21 @@ body {
 
 .card {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   min-height: 450px;
+  padding: 50px 40px;
   color: #fff;
+  line-height: 1.2;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 a.card-link {
   width: inherit;
-}
-
-.card_type_film,
-.card_type_book,
-.card_type_picture {
-  position: relative;
-  background-repeat: no-repeat;
-  background-size: cover;
+  text-decoration: none;
 }
 
 .card_type_film {
@@ -232,17 +239,8 @@ a.card-link {
   background-image: url("../images/card-lot-03.jpg");
 }
 
-.card__title,
-.card__text {
-  position: absolute;
-  right: 40px;
-  left: 40px;
-  color: #fff;
-  line-height: 1.2;
-}
-
 .card__title {
-  top: 50px;
+  z-index: 1;
   font-weight: 700;
   font-size: 22px;
   text-decoration: underline;
@@ -252,7 +250,7 @@ a.card-link {
 }
 
 .card__text {
-  bottom: 50px;
+  z-index: 1;
   font-weight: 400;
   font-size: 20px;
 }
